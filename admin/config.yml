@@ -15,8 +15,6 @@ collections:
       - name: "fotos"
         label: "Lista de Fotografías"
         file: "content/galeria.json"
-        media_folder: "img"
-        public_folder: "/img"
         format: "json"
         fields:
           - name: "items"
