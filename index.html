@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basamortu | Bienvenid@</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #FDD866;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .splash-container {
+            text-align: center;
+            animation: fadeIn 2.5s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .contacto-container {
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            justify-content: center;
+        }   
+
+        .logo-img {
+            max-width: 250px;
+            height: auto;
+            margin-bottom: 30px;
+            filter: drop-shadow(0 0 10px rgba(0,0,0,0.1));
+            transition: transform 0.5s ease;
+        }
+
+        .logo-img:hover {
+            transform: scale(1.05);
+        }
+
+        .btn-entrar, .btn-contacto {
+            display: inline-block;
+            padding: 15px 45px;
+            border: 1px solid #000000;
+            color: #000000;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-size: 0.75rem;
+            transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            background: transparent;
+        }
+
+        .btn-entrar:hover, .btn-contacto:hover {
+            background: #000000;
+            color: #FDD866;
+            border-color: #000000;
+            letter-spacing: 7px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; filter: blur(10px); }
+            to { opacity: 1; filter: blur(0); }
+        }
+
+        @media (max-width: 600px) {
+            .logo-img { max-width: 180px; }
+            .contacto-container { flex-direction: column; }
+        }
+
+        footer {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            font-size: 0.7rem;
+            color: #000000;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }    
+    </style>
+</head>
+<body>
+
+    <main class="splash-container">
+        <img src="logo-basamortu.png" alt="Basamortu Logo" class="logo-img">
+        
+        <a href="home.html" class="btn-entrar">Entrar</a>
+
+        <div class="contacto-container">
+            <a href="mailto:juncal@basamortu.com" class="btn-contacto">Contacto Juncal</a>
+            <a href="mailto:gorka@basamortu.com" class="btn-contacto">Contacto Gorka</a>
+        </div>
+    </main>
+
+    <footer>
+        &copy; <span id="year"></span> BASAMORTU. Todos los derechos reservados.
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
