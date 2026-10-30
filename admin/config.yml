@@ -1,0 +1,24 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "img"
+public_folder: "img"
+
+collections:
+  - name: "galeria"
+    label: "Galería de fotos"
+    files:
+      - file: "content/galeria.json"
+        label: "Lista de Fotografías"
+        name: "fotos"
+        fields:
+          - name: "items"
+            label: "Fotografías"
+            widget: "list"
+            summary: '{{fields.title}} ({{fields.category}})'
+            fields:
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Categoría", name: "category", widget: "select", options: ["retratos", "paisaje", "astrofotografia", "proyectos"] }
+              - { label: "Imagen", name: "image", widget: "image" }
+              - { label: "Texto Alternativo (SEO)", name: "alt", widget: "string", required: false }
