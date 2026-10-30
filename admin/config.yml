@@ -13,6 +13,7 @@ collections:
       - file: "content/galeria.json"
         label: "Lista de Fotografías"
         name: "fotos"
+        extension: "json"
         format: "json"
         fields:
           - name: "items"
