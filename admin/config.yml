@@ -3,6 +3,8 @@ backend:
   branch: main
 
 site_url: https://basamortu.com
+display_url: https://basamortu.com
+
 media_folder: "img"
 public_folder: "/img"
 
@@ -10,10 +12,11 @@ collections:
   - name: "galeria"
     label: "Galería de fotos"
     files:
-      - file: "content/galeria.json"
+      - name: "fotos"
         label: "Lista de Fotografías"
-        name: "fotos"
-        extension: "json"
+        file: "content/galeria.json"
+        media_folder: "img"
+        public_folder: "/img"
         format: "json"
         fields:
           - name: "items"
