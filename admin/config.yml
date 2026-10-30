@@ -13,11 +13,12 @@ collections:
       - file: "content/galeria.json"
         label: "Lista de Fotografías"
         name: "fotos"
+        format: "json"
         fields:
           - name: "items"
             label: "Fotografías"
             widget: "list"
-            summary: '{{fields.title}} ({{fields.category}})'
+            summary: "{{fields.title}}"
             fields:
               - { label: "Título", name: "title", widget: "string" }
               - { label: "Categoría", name: "category", widget: "select", options: ["retratos", "paisaje", "astrofotografia", "proyectos"] }
