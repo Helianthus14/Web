@@ -2,8 +2,9 @@ backend:
   name: git-gateway
   branch: main
 
+site_url: https://basamortu.com
 media_folder: "img"
-public_folder: "img"
+public_folder: "/img"
 
 collections:
   - name: "galeria"
